@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #303030;
+    font-family: 'Fira Code', monospace;
+    font-size: clamp(1rem, 0.5rem + 1.5vw, 1.125rem); /* Scales smoothly from 16px to 18px */
+
+    /* Use a clean, soft off-white or light gray for general body text */
+    color: #e0e0e0;
+}
+
+/* 3. Use your "School Bus Yellow" strategically for emphasis, headings, or links */
+h1, h2, h3, strong, a {
+    color: #FFD800; 
+}
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
