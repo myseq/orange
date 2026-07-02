@@ -23,3 +23,16 @@ input, textarea, button, select {
     font-size: inherit;
     color: inherit;
 }
+
+a:link { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.bordered-div {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ale355; 
+    border-radius: 5px; 
+    padding: 10px 5px 20px 50px;
+    box-sizing: border-box; /* Includes border and padding in dimensions */
+}
+
