@@ -48,6 +48,33 @@
         <p><i>&copy; 2026 Mandarin Educational Guide</i></p>
     </footer>
 
+        <script>
+        let wakeLock = null;
+
+        async function requestWakeLock() {
+            try {
+                wakeLock = await navigator.wakeLock.request('screen');
+                document.getElementById('lock-state').className = "active";
+
+                wakeLock.addEventListener('release', () => {
+                    document.getElementById('lock-state').className = "";
+                });
+            } catch (err) {
+                console.error(`${err.name}, ${err.message}`);
+            }
+        }
+
+        // Request lock on page load
+        requestWakeLock();
+
+        // Re-request if user switches back to the tab
+        document.addEventListener('visibilitychange', async () => {
+            if (wakeLock !== null && document.visibilityState === 'visible') {
+                await requestWakeLock();
+            }
+        });
+    </script>
+
 </body>
 </html>
 
