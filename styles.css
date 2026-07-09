@@ -42,3 +42,12 @@ a:hover { text-decoration: underline; }
     box-sizing: border-box; /* Includes border and padding in dimensions */
 }
 
+.fruit-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
