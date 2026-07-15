@@ -16,13 +16,16 @@ body {
 
     /* Use a clean, soft off-white or light gray for general body text */
     color: #e0e0e0;
+    counter-reset: h2-count h3-count;
 }
 
-/* 3. Use your "School Bus Yellow" strategically for emphasis, headings, or links */
-h1, h2, h3, strong, a {
-    color: #FFD800; /* School bus Yellow, Gold, Sunglow */
-    /* color: #7CFC00; Nuclear Waste, Lawngreen, Yellow, Chartreuse, Electric Lime */ 
-}
+h2::before { content: counter(h2-count) ". "; }
+h3 { counter-increment: h2-count; }
+h3::before { content: counter(h2-count) "." counter(h3-count) " "; }
+
+h1, strong { color: #FFD800; /* Sunglow */ }
+h2         { color: #C1FE1A; /* chartreuse */ }
+h3, a      { color: #A4D8FF /* Icy Blue */ }
 
 input, textarea, button, select {
     font-family: inherit;
@@ -51,3 +54,6 @@ a:hover { text-decoration: underline; }
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+
+
