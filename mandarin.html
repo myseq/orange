@@ -15,13 +15,13 @@
 
     <main>
         <section>
-            <h3>What is a Mandarin Orange?</h3>
+            <h2>What is a Mandarin Orange?</h2>
             <img src="mandarin.png" alt="Mandarin Orange" class="fruit-img">
             <p>The mandarin orange (<i>Citrus reticulata</i>) is a small, sweet citrus tree fruit. They look like smaller versions of common oranges, but they are flatter at the top and bottom. Their skin is thinner and much easier to peel.</p>
         </section>
 
         <section>
-            <h3>Key Characteristics</h3>
+            <h2>Key Characteristics</h2>
             <ul>
                 <li><strong>Taste:</strong> Sweeter and less acidic than standard oranges.</li>
                 <li><strong>Peel:</strong> Loose, thin skin that separates easily from the fruit segments.</li>
@@ -30,7 +30,7 @@
         </section>
 
         <section>
-            <h3>Popular Varieties</h3>
+            <h2>Popular Varieties</h2>
             <p>Mandarins include several well-known types:</p>
             <ul>
                 <li><strong>Clementines:</strong> Seedless, very sweet, and popular for school lunches.</li>
@@ -40,7 +40,7 @@
         </section>
 
         <section>
-            <h3>Cultural Significance</h3>
+            <h2>Cultural Significance</h2>
             <p>In Chinese culture, mandarin oranges are traditional symbols of abundance and good fortune. During the Lunar New Year, they are frequently displayed as decorations and gifted to friends and family to wish them prosperity.</p>
         </section>
     </main>
@@ -48,33 +48,6 @@
     <footer>
         <p><i>&copy; 2026 Mandarin Educational Guide</i></p>
     </footer>
-
-        <script>
-        let wakeLock = null;
-
-        async function requestWakeLock() {
-            try {
-                wakeLock = await navigator.wakeLock.request('screen');
-                document.getElementById('lock-state').className = "active";
-
-                wakeLock.addEventListener('release', () => {
-                    document.getElementById('lock-state').className = "";
-                });
-            } catch (err) {
-                console.error(`${err.name}, ${err.message}`);
-            }
-        }
-
-        // Request lock on page load
-        requestWakeLock();
-
-        // Re-request if user switches back to the tab
-        document.addEventListener('visibilitychange', async () => {
-            if (wakeLock !== null && document.visibilityState === 'visible') {
-                await requestWakeLock();
-            }
-        });
-    </script>
 
 </body>
 </html>
