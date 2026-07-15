@@ -37,7 +37,7 @@ input, textarea, button, select {
 }
 
 a:link { text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: underline; font-weight: bold; }
 
 .bordered-div {
     border-width: 3px;
