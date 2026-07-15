@@ -58,5 +58,12 @@ a:hover { text-decoration: underline; font-weight: bold; }
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  width: 25%;                 /* Spans only a quarter of the width */
+  margin: 3rem auto;          /* Centered automatically with generous spacing */
+  opacity: 0.4;
+}
 
