@@ -27,8 +27,8 @@ h3 { counter-increment: h3-count; }
 h3::before { content: counter(h2-count) "." counter(h3-count) " "; }
 
 h1, strong { color: #FFD800; /* Sunglow */ }
-h2         { color: #C1FE1A; /* chartreuse */ }
-h3, a      { color: #A4D8FF /* Icy Blue */ }
+h2, h3     { color: #C1FE1A; /* chartreuse */ }
+a          { color: #A4D8FF /* Icy Blue */ }
 
 input, textarea, button, select {
     font-family: inherit;
